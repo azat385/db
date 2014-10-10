@@ -1,6 +1,6 @@
 CREATE TABLE `rpi_plc` (
 	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
-	`time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	`time` timestamp DEFAULT (datetime('now','localtime')),
 	`destination` TEXT,
 	`packet_loss` DECIMAL(10,3),
 	`min` DECIMAL(10,3),
